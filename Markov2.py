@@ -1,3 +1,5 @@
+# Dice thrown and state is maximum of the dice number till n throws ..
+
 import numpy as np
 from numpy.linalg import matrix_power
 
@@ -18,6 +20,9 @@ initial_dist = np.array([[1,0 ,0,0,0,0,0]])
 
 print(np.round(p,2))
 
-p2 = np.round(matrix_power(p, 1), 2)
+for i in range(10):
 
-print(p2)
+    p2 = np.round(matrix_power(p, i), 2)
+    print("***************")
+    print (i)
+    print(p2)
