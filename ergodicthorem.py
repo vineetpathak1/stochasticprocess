@@ -1,3 +1,5 @@
+# accidents probability insurance 
+
 import numpy as np
 from numpy.linalg import matrix_power
 
@@ -12,7 +14,6 @@ p = np.array([  [.95, 0.05],
 initial_dist = np.array([[0.99,0.01]]) 
 
 print(np.round(p,2))
-
 
 p2 = np.round(matrix_power(p, 2), 10)    
 p_n =np.matmul(initial_dist, p2)
