@@ -1,3 +1,6 @@
+# Peridod Markov Chain with period = 2
+# Chexk the matrix power , it fluctuares for the odd and even multiplier 
+
 import numpy as np
 from numpy.linalg import matrix_power
 
