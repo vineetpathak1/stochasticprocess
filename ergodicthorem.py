@@ -14,6 +14,6 @@ initial_dist = np.array([[0.99,0.01]])
 print(np.round(p,2))
 
 
-p2 = np.round(matrix_power(p, 1), 10)    
+p2 = np.round(matrix_power(p, 2), 10)    
 p_n =np.matmul(initial_dist, p2)
 print(p_n)
