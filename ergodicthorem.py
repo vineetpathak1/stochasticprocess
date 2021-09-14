@@ -11,7 +11,7 @@ p = np.array([  [.95, 0.05],
                 [0.98, 0.02]
                 ]) 
 
-initial_dist = np.array([[0.99,0.01]]) 
+initial_dist = np.array([[990,10]]) 
 
 print(np.round(p,2))
 
