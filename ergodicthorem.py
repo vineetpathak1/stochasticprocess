@@ -7,14 +7,18 @@ from numpy import linalg  as la
 
 from scipy import linalg  as scla
 
-p = np.array([  [.95, 0.05], 
-                [0.98, 0.02]
+p = np.array([  [.7, 0.3], 
+                [0.2, 0.8]
                 ]) 
 
-initial_dist = np.array([[990,10]]) 
+initial_dist = np.array([[0.4,0.6]]) 
 
-print(np.round(p,2))
+print(np.round(p,15))
 
-p2 = np.round(matrix_power(p, 2), 10)    
-p_n =np.matmul(initial_dist, p2)
-print(p_n)
+
+
+for i in range(2) :
+    p2 = np.round(matrix_power(p, i), 10)   
+    print (i, p2) 
+    p_n =np.matmul(initial_dist, p2)
+    print(i, p_n)
