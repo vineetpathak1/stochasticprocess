@@ -1,0 +1,30 @@
+import numpy as np
+from numpy.linalg import matrix_power
+
+from numpy import linalg  as la
+
+from scipy import linalg  as scla
+
+p = np.array([  [0.5, -0.25], 
+                [-0.25, 0.75]
+                ]) 
+
+p_inv = la.inv (p)
+
+# print(p_inv)
+
+
+q = np.array([  [0.5, 0.25], 
+                [0.25, 0.25]
+                ]) 
+
+q_cum = np.array([  [0, 0], 
+                [0, 0]
+                ]) 
+for i in range(1000):
+    q_pow = q ** i  
+    # print(q_pow)
+    q_cum = q_cum + q_pow
+
+print(q_cum)
+
