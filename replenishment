@@ -1,0 +1,39 @@
+import numpy as np
+from numpy.linalg import matrix_power
+import matplotlib.pyplot as plt
+
+import pydtmc as dtmc
+
+from numpy import linalg  as la
+
+from scipy import linalg  as scla
+
+success_prob = 0.48
+failure_prob = 1 - success_prob
+
+p = np.array([  [0.2, 0.3,0.5,0], 
+                [0.5, 0.5,0,0],
+                [0.2, 0.3,0.5,0],
+                [0, 0.2,0.3,0.5],
+                ]) 
+
+# mc = dtmc.MarkovChain(p, ['0', '1', '2','3'])
+
+# print(mc)
+    
+
+# print(mc.absorption_probabilities())
+# print(mc.walk(20))
+
+
+p101 = matrix_power(p, 101)
+print (p101)
+
+i_q = np.array([  [0.5, 0,0], 
+                [-0.3, 0.5,0],
+                [-0.2, -0.3,0.5],
+                ]) 
+
+V_inv = la.inv(i_q)
+
+print(V_inv)
