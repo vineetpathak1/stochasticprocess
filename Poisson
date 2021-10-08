@@ -1,0 +1,23 @@
+import numpy as np
+from numpy.linalg import matrix_power
+
+from numpy import linalg  as la
+
+from scipy import linalg  as scla
+
+from scipy.stats import poisson
+data_poisson = poisson.rvs(mu=2, size=100)
+
+for i in range(10) :  
+    prob_5 = poisson.pmf(k= i, mu = 4)
+    print(prob_5)
+
+# prob_5 = poisson.pmf(k= 35, mu     = 35)  
+
+# print (prob_5)
+
+# a = (6 ** 8) * ( 14 ** 10) / ( 20 ** 18)
+# b = np.math.factorial(18) / (np.math.factorial(8) * np.math.factorial(10))
+# print (a)
+# print (b)
+# print ( a* b)
