@@ -6,18 +6,38 @@ from numpy import linalg  as la
 from scipy import linalg  as scla
 
 from scipy.stats import poisson
-data_poisson = poisson.rvs(mu=2, size=100)
+data_poisson = poisson.rvs(mu=2, size=300)
+stats1 = poisson.median(mu =2)
+print(stats1)
 
-for i in range(10) :  
-    prob_5 = poisson.pmf(k= i, mu = 4)
-    print(prob_5)
+
+# deine funciton called as poissionPMF, poissioonCDF, poissionMean, poissionMedian , poissionStdDev, possionRv
+
+
+# print(data_poisson)
+
+# for i in range(10) :  
+#     prob_5 = poisson.pmf(k= i, mu = 4)
+#     print(prob_5)
 
 # prob_5 = poisson.pmf(k= 35, mu     = 35)  
 
 # print (prob_5)
 
-# a = (6 ** 8) * ( 14 ** 10) / ( 20 ** 18)
-# b = np.math.factorial(18) / (np.math.factorial(8) * np.math.factorial(10))
-# print (a)
-# print (b)
-# print ( a* b)
+
+# prob_1 = poisson.pmf(k= 10, mu = 10)
+# print(prob_1)
+
+# prob_2 = poisson.pmf(k= 15, mu = 20)
+# print(prob_2)
+
+# print(prob_1 * prob_2)
+
+
+# prob_3 = poisson.cdf(k= 6, mu = 2)
+# print(1- prob_3)
+
+# prob_4 = poisson.cdf(k= 15, mu = 20)
+# print(prob_4)
+
+# print(prob_3 * prob_4)
