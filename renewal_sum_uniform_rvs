@@ -1,0 +1,33 @@
+import numpy as np
+from statistics import mean 
+
+number_runs = 1000000                
+
+threshold_sum_value_to_exceed = 1
+
+uniform_lower = 0
+uniform_higher = 1
+
+list_results = []
+
+for i in range( number_runs) :
+    counter = 0
+    sum = 0
+
+    while (sum < threshold_sum_value_to_exceed) :
+        x = np.random.uniform(uniform_lower, uniform_higher)
+        counter = counter + 1
+        sum = sum + x
+
+    list_results.append(counter)
+
+    avg_counter = mean(list_results) 
+    print ("avergae of rv counter",avg_counter)
+    max_counter = max(list_results)
+    print (max_counter)
+
+    for i in range (max_counter+1) :
+        count = list_results.count(i)
+        print (i, count)
+
+# print(list_results)
