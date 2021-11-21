@@ -2,15 +2,12 @@ import numpy as np
 from statistics import mean 
 from random import choices
 
-number_runs = 1000
+number_runs = 10000
 number_generations = 25
 
 
-
-
-
-offsprings_list = [0,1,2]
-offsprings_pmf = [0.2, 0.3, 0.5]
+offsprings_list = [0,1]
+offsprings_pmf = [0.75, 0.25]
 
 
 mean_offspring = sum( [x * y for (x, y) in zip(offsprings_list, offsprings_pmf)])
@@ -57,6 +54,7 @@ for num_runs in range (number_runs) :
 print (extinction_generation)
 print("survived runs population", survived_with_population)
 print ("% of runs extincted", len(extinction_generation)/num_runs)
+print ("avg of generation number of extinction", mean(extinction_generation))
 
 
 # lenght_offspring_prob_distribution = len(offspring_prob_distribution)
