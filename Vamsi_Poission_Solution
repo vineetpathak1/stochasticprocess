@@ -1,0 +1,44 @@
+import math
+
+def poisson_PMF(x,lambda_):
+    PMF= math.exp(-lambda_)*math.pow(lambda_,x)/math.factorial(x)
+    return(PMF)
+
+def poisson_CDF(x,lambda_):
+    CDF=0
+    for i in range(x):
+        a = math.exp(-lambda_)
+        b = math.factorial(i)
+        c = math.pow(lambda_, i)
+        # CDF= CDF + math.exp(-lambda_)*math.pow(lambda_,i)/math.factorial(i)
+        print ("a, i", a, i)
+        print ("b", b)
+        print ("c", c)
+    return(CDF)
+
+def poisson_mean(lambda_):
+    mean= lambda_
+    return(mean)
+
+def poisson_var(lambda_):
+    var=lambda_
+    return(var)
+
+def poisson_median(lambda_):
+    CDF=0
+    count=0
+    while CDF<0.5:
+        # CDF = CDF + (math.exp(-lambda_) * math.pow(lambda_, count) / math.factorial(count))
+        # a = math.exp(-lambda_)
+        # b = math.factorial(count)
+        # c = math.pow(lambda_, count)
+        # CDF = CDF + (math.exp(-lambda_)  / math.factorial(count))  * math.pow(lambda_, count)
+        # count=count+1
+        print (a)
+    return(count-2)
+
+print("PMF for the input: ",poisson_PMF(1,0.2))
+print("CDF for the input: ",poisson_CDF(160,158))
+print("Mean for the input: ",poisson_mean(0.2))
+print("Variance for the input: ",poisson_var(0.2))
+print("Median for the input: ", poisson_median(1))

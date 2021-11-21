@@ -41,7 +41,7 @@ p = np.array([  [-1, 1/2, 1/2],
                 [0, 3, -3]
                 ]) 
 
-scalar_t = 10
+scalar_t = 500  
 p = p * scalar_t
 
 # print (p)

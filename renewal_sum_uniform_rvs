@@ -20,7 +20,7 @@ for i in range( number_runs) :
         sum = sum + x
 
     list_results.append(counter)
-
+    
     avg_counter = mean(list_results) 
     print ("avergae of rv counter",avg_counter)
     max_counter = max(list_results)
